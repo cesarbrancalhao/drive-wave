@@ -11,25 +11,25 @@ const Hero = () => {
   return (
     <div className='hero'>
         
-        <div className='flex-1 pt-36 padding-x'>
-            <h1 className='hero__title'>Find the perfect car for you here!</h1>
+      <div className='flex-1 pt-36 padding-x'>
+          <h1 className='hero__title'>Find the perfect car for you here!</h1>
 
-            <p className='hero__subtitle'>The best rental for your next trip.</p>
+          <p className='hero__subtitle'>The best companion for your next trip.</p>
 
-            <CustomButton
-            title="Explore Cars"
-            containerStyles="bg-primary-blue text-white rounded-full mt-10"
-            handleClick={handleScroll} />
+          <CustomButton
+          title="Explore"
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          handleClick={handleScroll} />
+      </div>
+
+      <div className="hero__image-container">
+        <div className="hero__image">
+          <Image src="/hero.png" alt="hero" fill className="object-contain" />
         </div>
 
-        <div className='hero__image-container'>
+        <div className="hero__image-overlay" />
+      </div>
 
-        </div>
-        <div className='hero__image'>
-            <Image src='/hero.png' alt='' fill className='object-contain' />
-
-            <div className='hero__image-overlay' />
-        </div>
     </div>
   )
 }
