@@ -10,6 +10,7 @@ const Hero = () => {
 
   return (
     <div className='hero'>
+        
         <div className='flex-1 pt-36 padding-x'>
             <h1 className='hero__title'>Find the perfect car for you here!</h1>
 
@@ -19,6 +20,15 @@ const Hero = () => {
             title="Explore Cars"
             containerStyles="bg-primary-blue text-white rounded-full mt-10"
             handleClick={handleScroll} />
+        </div>
+
+        <div className='hero__image-container'>
+
+        </div>
+        <div className='hero__image'>
+            <Image src='/hero.png' alt='' fill className='object-contain' />
+
+            <div className='hero__image-overlay' />
         </div>
     </div>
   )
