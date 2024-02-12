@@ -11,7 +11,7 @@ const Navbar = () => {
                 <Link href="/" className="flex justify-center items-center">
                     <Image
                         src="/logo.svg"
-                        alt="DreamWave logo"
+                        alt="logo"
                         width={118}
                         height={18}
                         className="object-contain"
