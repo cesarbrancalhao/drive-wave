@@ -17,8 +17,8 @@ const Footer = () => {
                         className="object-contain"
                     />
 
-                    <p className="text-base text-gray-700">
-                        DreamWave 2024 <br /> All rights reserved &copy;
+                    <p className="text-sm text-gray-700">
+                    &copy; DreamWave 2024
                     </p>
                 </div>
 
@@ -47,7 +47,7 @@ const Footer = () => {
 
             <div className="flex justify-between items-center flex-wrap mt-10 border-t bortder-gray-100 sm:px-16 px-6 py-10">
                 <p>
-                    @2024 DreamWave. All rights reserved
+                    @2024 DreamWave. All rights reserved &copy;
                 </p>
 
                 <div className="footer__copyrights-link">
