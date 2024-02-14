@@ -12,9 +12,9 @@ const Hero = () => {
     <div className='hero'>
         
       <div className='flex-1 pt-36 padding-x'>
-          <h1 className='hero__title'>Find the perfect car for you here!</h1>
+          <h1 className='hero__title'>Find your dream car!</h1>
 
-          <p className='hero__subtitle'>The best companion for your next trip.</p>
+          <p className='hero__subtitle'>Live life in the fast lane</p>
 
           <CustomButton
           title="Explore"
