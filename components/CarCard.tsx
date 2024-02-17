@@ -26,14 +26,18 @@ const CarCard = ({ car }: CarCardProps) => {
 
         <p className="flex mt-4 text-[32px] font-extrabold">
             <span className="self-start text-[14px] font-semibold">
-                $ {carPrice}
+                $
             </span>
+            {carPrice}
         </p>
-        <p className="flex text-[32px] font-extrabold">
-            <span className="self-start text-[14px] font-medium">
+
+        <div className="relative w-full h-40 my-3 object-contain">
+            <Image src="/hero.png" alt="Car model" fill priority />
+        </div>
+
+        <p className="self-start text-[13px] font-medium">
                 or $ {carRent} / day
-            </span>
-        </p>
+            </p>
     </div>
   )
 }
