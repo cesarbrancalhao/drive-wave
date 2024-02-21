@@ -2,7 +2,7 @@ import React from 'react'
 
 const CustomFilter = () => {
   return (
-    <div>filter</div>
+    <div></div>
   )
 }
 
