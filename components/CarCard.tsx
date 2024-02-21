@@ -10,7 +10,7 @@ import { generateCarImageUrl } from "@/utils";
 
 interface CarCardProps {
     car: CarProps;
-}
+};
 
 const CarCard = ({ car }: CarCardProps) => {
 
@@ -77,7 +77,7 @@ const CarCard = ({ car }: CarCardProps) => {
             car={car} />
         
     </div>
-  )
-}
+  );
+};
 
-export default CarCard
+export default CarCard;

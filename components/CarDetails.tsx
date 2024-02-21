@@ -10,13 +10,13 @@ interface CarDetailsProps {
     isOpen: boolean;
     closeModal: () => void;
     car: CarProps;
-}
+};
 
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
   return (
     <>
         <Transition appear show={isOpen} as={Fragment}>
-            <Dialog as="div" className="Relative z-10" onClose={closeModal}>
+            <Dialog as="div" className="relative z-10" onClose={closeModal}>
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -108,7 +108,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
             </Dialog>
         </Transition>
     </>
-  )
-}
+  );
+};
 
-export default CarDetails
+export default CarDetails;

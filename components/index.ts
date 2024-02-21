@@ -18,4 +18,4 @@ export {
     SearchManufacturer,
     CarCard,
     CarDetails
-}
+};

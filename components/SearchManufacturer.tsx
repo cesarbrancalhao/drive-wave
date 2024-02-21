@@ -1,10 +1,10 @@
 "use client";
 
 import { Combobox, Transition } from "@headlessui/react";
-import { SearchManufacturerProps } from '@/types'
+import { SearchManufacturerProps } from '@/types';
 import { manufacturers } from "@/constants";
 
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
 import { useState, Fragment } from "react";
 
@@ -22,6 +22,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
         <div className="search-manufacturer">
             <Combobox value={manufacturer} onChange={setManufacturer}>
                 <div className="relative w-full">
+
 					<Combobox.Button className="absolute top-[14px]">
 						<Image
 							src="/car-logo.svg"
@@ -47,14 +48,18 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 						afterLeave={() => setQuery('')}
 					>
 						<Combobox.Options>
+
 							{filteredManufacturers.length === 0 && query !== '' ? (
+
 								<Combobox.Option
 									value={query}
 									className="search-manufacturer__option"
 								>
 									Create "{query}"
 								</Combobox.Option>
+
 							) : (
+
 								filteredManufacturers.map((item) => (
 									<Combobox.Option
 										key={item}
@@ -65,34 +70,36 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
 										`}
 										value={item}
 									>
+
 										{({selected, active}) => (
 											<>
-												<span
-													className={`block truncate ${
-														selected ? 'font-medium' : 'font-normal'
-													}`}
-												>
+												<span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
 													{item}
 												</span>
+
 												{selected ? (
+
 													<span
-														className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-															active ? 'text-white' : 'text-primary-blue'
-														}`}
-													>
+														className={`absolute inset-y-0 left-0 flex items-center pl-3 
+														${active ? 'text-white' : 'text-primary-blue'}`}
+														>
 													</span>
+
 												) : null}
 											</>
 										)}
+
 									</Combobox.Option>
 								))
+
 							)}
+							
 						</Combobox.Options>
 					</Transition>
                 </div>
             </Combobox>
         </div>
-    )
-}
+    );
+};
 
-export default SearchManufacturer
+export default SearchManufacturer;

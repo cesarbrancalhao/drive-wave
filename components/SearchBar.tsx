@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
-    <button type="submit" className={`ml-3 z-10 ${otherClasses}`}>
+    <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}>
         <Image src="/magnifying-glass.svg" alt="glass"
         width={40} height={40} className="object-contain"/>
     </button>   
@@ -17,19 +17,20 @@ const SearchBar = () => {
 
     const [manufacturer, setManufacturer] = useState("");
     const [model, setModel] = useState('');
+
     const router = useRouter();
 
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (manufacturer === "")
+        if (manufacturer.trim() === "")
             return alert("Please fill in the search bar");
 
         updateSearchParams(
             model.toLowerCase(),
-            manufacturer.toLowerCase()
+            (manufacturer.toLowerCase() || "")
         );
-    }
+    };
 
     const updateSearchParams = (model: string, manufacturer: string) => {
         const searchParams = new URLSearchParams(window.location.search);
@@ -48,7 +49,7 @@ const SearchBar = () => {
         const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
 
         router.push(newPathName, {scroll: false});
-    }
+    };
 
     return (
     <form className="searchbar" onSubmit={handleSearch}>
@@ -80,7 +81,7 @@ const SearchBar = () => {
         </div>
         <SearchButton otherClasses="max-sm:hidden" />
     </form>
-    )
-}
+    );
+};
 
-export default SearchBar
+export default SearchBar;

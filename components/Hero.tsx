@@ -1,12 +1,12 @@
 "use client";
 
-import Image from 'next/image'
-import CustomButton from './CustomButton'
+import Image from 'next/image';
+import CustomButton from './CustomButton';
 
 const Hero = () => {
     const handleScroll = () => {
-        
-    }
+        //todo
+    };
 
   return (
     <div className='hero'>
@@ -31,7 +31,7 @@ const Hero = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

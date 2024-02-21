@@ -8,12 +8,12 @@ export interface CustomButtonProps {
     textStyles?: string;
     rightIcon?: string;
     isDisabled?: boolean;
-}
+};
 
 export interface SearchManufacturerProps {
     manufacturer: string;
     setManufacturer: (manufacturer: string) => void;
-}
+};
 
 export interface CarProps {
     city_mpg: number;
@@ -28,7 +28,7 @@ export interface CarProps {
     model: string;
     transmission: string;
     year: number;
-}
+};
 
 export interface FilterProps {
     manufacturer: string;
@@ -36,4 +36,4 @@ export interface FilterProps {
     fuel: string;
     limit: number;
     model: string;
-} //todo: maybe nullable
+};
