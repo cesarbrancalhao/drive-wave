@@ -1,10 +1,12 @@
 "use client";
 
+import { writeValueNames } from '@/constants';
 import { CarProps } from '@/types';
 import { generateCarImageUrl } from '@/utils';
 import { Dialog, Transition } from "@headlessui/react";
 import Image from 'next/image';
 import { Fragment } from 'react';
+
 
 interface CarDetailsProps {
     isOpen: boolean;
@@ -94,7 +96,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                             </h4>
 
                                             <p className="text-black-100 font-semibold">
-                                                {value}
+                                                {writeValueNames(key, `${value}`)}
                                             </p>
                                         </div>
                                     ))}

@@ -1,3 +1,19 @@
+export const writeValueNames = (key: string, value: any) => {
+    let reName = (value: string) => value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+
+    if (key === "model" || key === "make" || key === "class" || key === "fuel_type")
+        return reName(value);
+
+    if (key === "drive")
+        return value.toUpperCase();
+
+    if (key === "transmission")
+        return value === "a" ? "Automatic" : "Manual";
+
+    return value;
+}
+
+
 export const calculateCarRent = (combination_mpg: number, year: number, transmission: string) => {
 	const basePricePerDay = 50;
 	const mileageFactor = 0.5;
