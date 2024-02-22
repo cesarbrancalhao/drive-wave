@@ -42,6 +42,9 @@ export const updateSearchParams = (type: string, value: string) => {
 
     searchParams.set(type, value);
 
+	if (window.location.search !== searchParams.toString() && type !== 'limit')
+		searchParams.set('limit', '8');
+
     const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
     
     return newPathName;

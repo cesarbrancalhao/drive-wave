@@ -46,6 +46,8 @@ const SearchBar = () => {
         else
             searchParams.delete('manufacturer');
 
+        searchParams.set('limit', '8');
+
         const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
 
         router.push(newPathName, {scroll: false});
