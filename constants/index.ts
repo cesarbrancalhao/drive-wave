@@ -15,7 +15,7 @@ export const calculateCarRent = (combination_mpg: number, year: number, transmis
 export const calculateCarPrice = (city_mpg: number, year: number, combination_mpg: number, displacement: number, transmission: string, cylinders: number) => {
 	const loanInterestRate =  1.99;
 
-	const displacementRate = displacement / 10;
+	const displacementRate = (displacement || 0) / 10;
 
 	const ageFactor = 0.05;
 	const ageRate = (new Date().getFullYear() - year) * ageFactor;
@@ -28,7 +28,7 @@ export const calculateCarPrice = (city_mpg: number, year: number, combination_mp
 
 	const transmissionRate = transmission === 'a' ? 0.3 : 0;
 
-	const cylindersRate = cylinders / 10;
+	const cylindersRate = (cylinders || 0) / 10;
 
 	const carTotalPrice = (2750) * (ageRate + 
 									mileageRate +
