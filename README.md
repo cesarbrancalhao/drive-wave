@@ -2,7 +2,7 @@
 
 This is a car showcase app built in [Next.js](https://nextjs.org/).
 
-Check it [live]() (WIP)!
+### Check it live [here](https://drive-wave.vercel.app/)!
 
 ![Alt text](img/catalogue.png?raw=true)
 
