@@ -58,6 +58,7 @@ export const calculateCarPrice = (city_mpg: number, year: number, combination_mp
 }
 
 export const manufacturers = [
+    "All",
     "Acura",
     "Alfa Romeo",
     "Aston Martin",

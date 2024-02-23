@@ -1,3 +1,4 @@
+import { SearchBar } from "@/components";
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
@@ -51,4 +52,12 @@ export interface CustomFilterProps {
 export interface ShowMoreProps {
     pageNumber: number;
     isNext: boolean;
+}
+
+export interface SearchParamsProps {
+    manufacturer?: string;
+    year?: number;
+    fuel?: string;
+    limit?: number;
+    model?: string;
 }

@@ -15,7 +15,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
 
 const SearchBar = () => {
 
-    const [manufacturer, setManufacturer] = useState("");
+    let [manufacturer, setManufacturer] = useState("");
     const [model, setModel] = useState('');
 
     const router = useRouter();
@@ -23,8 +23,8 @@ const SearchBar = () => {
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (manufacturer.trim() === "")
-            return alert("Please fill in the search bar");
+        if (manufacturer === "All")
+            manufacturer = "";
 
         updateSearchParams(
             model.toLowerCase(),
