@@ -8,10 +8,10 @@ Check it [live]() (WIP)!
 
 ## Table of Contents
 
-1. [Introduction](#start)
-2. [Tech Stack](#stacks)
+1. [Getting Started](#start)
+2. [Tech Stacks](#stacks)
 3. [Features](#features)
-4. [Quick Start](#components)
+4. [Components](#components)
 
 ### <a name="start">Getting Started</a>
 
