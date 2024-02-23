@@ -6,7 +6,6 @@ import { useState, Fragment } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CustomFilterProps } from '@/types';
 import { updateSearchParams } from '@/utils';
-import { Router } from 'next/router';
 
 const CustomFilter = ({title, options}: CustomFilterProps) => {
 	const router = useRouter();

@@ -10,12 +10,12 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     const router = useRouter();
 
     const handleNavigation = () => {
-        debugger
+
         const newLimit = (pageNumber + 1) * 8;
         const newPathName = updateSearchParams('limit', `${newLimit}`);
 
         router.push(newPathName, {scroll: false});
-    }
+    };
 
     return (
         <div className="w-full flex-center gap-5 mt-10">
@@ -28,7 +28,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
                 />
             )}
         </div>
-    )
-}
+    );
+};
 
-export default ShowMore
+export default ShowMore;
