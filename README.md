@@ -2,6 +2,8 @@
 
 This is a car showcase app built in [Next.js](https://nextjs.org/).
 
+#### *Note: Since ImaginStudio has discontinued the free version of their API, this app will no longer be supported. I will maintain its website, but there won't be car images or new features.*
+
 ### Check it live [here](https://drive-wave.vercel.app/)!
 
 ![Alt text](img/catalogue.png?raw=true)
